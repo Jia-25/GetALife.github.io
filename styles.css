@@ -1,149 +1,87 @@
+/* Reset default margin & padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Dancing Script', cursive;
 }
 
-body {
-    background: url('your-background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Main layout */
 .container {
     display: flex;
-    width: 100%;
-    max-width: 1200px;
-    position: relative;
+    height: 100vh;
+    width: 100vw; /* Ensures full width */
 }
 
+/* Sidebar Styling */
 .sidebar {
-    width: 60px;
-    height: 100vh;
-    background-color: #caa0ff;
-    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px; /* Adjust width */
+    height: 100vh; /* Full height */
+    background-color: #c99cf1; /* Light purple */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    padding: 10px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    margin-left: 220px; /* Matches sidebar width */
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: width 0.5s ease-in-out;
-    overflow: hidden;
-}
-
-.sidebar.open {
-    width: 200px;
-}
-
-.sidebar .menu-toggle img {
-    width: 30px;
-    cursor: pointer;
-}
-
-nav ul {
-    list-style: none;
-    width: 100%;
-    margin-top: 20px;
-}
-
-nav ul li {
-    padding: 10px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-nav ul li img {
-    width: 25px;
-}
-
-.hidden {
-    display: none;
-}
-
-.sidebar.open .hidden {
-    display: block;
-}
-
-.bottom-links {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: left;
-}
-
-.bottom-links a {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-}
-
-main {
-    flex: 1;
+    justify-content: center;
     text-align: center;
-    padding: 40px;
-    color: black;
 }
 
-h1 {
-    font-size: 3rem;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.signup-box {
+/* Signup Form */
+.signup-form {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    max-width: 400px;
-    margin: auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.signup-box h2 {
-    margin-bottom: 15px;
-}
-
-.signup-box input {
+.signup-form form input {
+    display: block;
     width: 100%;
-    padding: 10px;
     margin: 10px 0;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.remember-me {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0;
-}
-
-.signup-box button {
-    width: 100%;
-    padding: 10px;
-    background-color: #9b59b6;
-    border: none;
+.signup-form button {
+    background-color: #8c52ff;
     color: white;
-    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.signup-box button:hover {
-    background-color: #8e44ad;
+.signup-form .checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.signup-form .checkbox input {
+    margin-right: 5px;
 }
