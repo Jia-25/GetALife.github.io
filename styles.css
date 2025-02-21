@@ -28,7 +28,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    width: 60px;
+    width: 60px; /* Default width */
     height: 100vh;
     background-color: #caa0ff;
     padding: 10px;
@@ -41,7 +41,7 @@ body {
 }
 
 .sidebar.open {
-    width: 200px;
+    width: 200px; /* Expanded width */
 }
 
 /* Ensuring Content Starts After Sidebar */
@@ -95,7 +95,6 @@ main {
     width: 100%;
 }
 
-
 /* Ensure Sidebar Icons Are Properly Sized */
 nav ul li img, 
 .bottom-links img {
@@ -115,24 +114,13 @@ nav ul li a {
     padding: 10px;
 }
 
-/* Adjust Sidebar Expansion Behavior */
-.sidebar.open {
-    width: 200px;
-}
-
-/* Prevent Content Overlapping With Sidebar */
-main {
-    margin-left: 60px;  /* Matches sidebar width */
-    width: calc(100% - 60px); /* Adjusts main width dynamically */
-}
-
 /* Responsive Fixes */
 @media screen and (max-width: 768px) {
     .sidebar {
-        width: 50px;
+        width: 50px; /* Reduced width for smaller screens */
     }
     main {
-        margin-left: 50px;
-        width: calc(100% - 50px);
+        margin-left: 50px; /* Adjusts main margin */
+        width: calc(100% - 50px); /* Adjusts main width dynamically */
     }
 }
