@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetALife - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <img src="arrow-icon.png" alt="Toggle Menu">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="home-icon.png" alt="Home"> Home</a></li>
+                    <li class="hidden"><a href="#">B1</a></li>
+                    <li class="hidden"><a href="#">B2</a></li>
+                    <li class="hidden"><a href="#">B3</a></li>
+                    <li class="hidden"><a href="#">B4</a></li>
+                    <li class="hidden"><a href="#">B5</a></li>
+                    <li class="hidden"><a href="#">B6</a></li>
+                    <li class="hidden"><a href="#">B7</a></li>
+                    <li class="hidden"><a href="#">B8</a></li>
+                </ul>
+                <div class="bottom-links">
+                    <a href="#"><img src="account-icon.png" alt="Account"> Account</a>
+                    <a href="#"><img src="settings-icon.png" alt="Settings"> Settings</a>
+                    <a href="#"><img src="support-icon.png" alt="Support"> Support</a>
+                </div>
+            </nav>
+        </aside>
+
+        <main>
+            <h1>GetALife</h1>
+            <p class="subtitle">Organize your life</p>
+            <div class="signup-box">
+                <h2>Sign Up</h2>
+                <form>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <button type="submit">Signup</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
